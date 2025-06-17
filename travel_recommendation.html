@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Recommendations</title>
+    <style>
+      body {
+        font-family: "sans-serif", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="travel_recommendation.css" />
+  </head>
+  <body>
+    <div class="nav-div">
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Airplane_silhouette.svg"
+          alt="Logo"
+          height="50px"
+          width="50px"
+        />
+        <h1>Travel Bloom</h1>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <a
+              href="#home"
+              onclick="event.preventDefault(); switchToSection('home') "
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#aboutus"
+              onclick="event.preventDefault(); switchToSection('aboutus')"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contactus"
+              onclick="event.preventDefault(); switchToSection('contactus')"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="search-div">
+        <input
+          type="text"
+          placeholder="Enter a destination or keyword"
+          id="search-input"
+        />
+        <img
+          src="https://www.svgrepo.com/show/7109/search.svg"
+          alt="search icon"
+          height="30px"
+          width="30px"
+        />
+        <button onclick="search()">Search</button>
+        <button onclick="clearSearch()">Clear</button>
+      </div>
+    </div>
+
+    <div class="data-div">
+      <div id="home" class="section" style="display: flex">
+        <div>
+          <h1>Explore Dream Destination</h1>
+          <p>
+            It encourages exploration of unfamiliar territories embracing
+            diverse cultures and landscapes, while persuing the desired
+            destination that captivates the heart and ignites the sense of
+            wonder
+          </p>
+          <button>Book Now</button>
+        </div>
+        <div id="recommendations"></div>
+      </div>
+      <div id="aboutus" class="section">
+        <div><h1>About Us</h1></div>
+        <div>
+          <p>
+            At <strong>Travel Bloom</strong>, we believe that travel is more
+            than just visiting new places — it’s about creating unforgettable
+            experiences, discovering diverse cultures, and finding hidden gems
+            around the world.
+          </p>
+          <p>
+            Our platform helps travelers like you find the perfect destinations,
+            whether you’re looking for adventure, relaxation, or cultural
+            immersion. With curated recommendations, expert travel tips, and
+            real user reviews, we make planning your next journey seamless and
+            inspiring.
+          </p>
+          <p>
+            Whether you're a seasoned globetrotter or a first-time explorer,
+            Travel Bloom is your trusted companion in crafting memorable
+            getaways. Let us help you bloom your travel dreams into reality.
+          </p>
+        </div>
+        <div style="display: flex">
+          <div>
+            <h1>Our Team</h1>
+          </div>
+
+          <div
+            style="
+              width: 250px;
+              padding: 20px;
+              border: 1px solid #ccc;
+              border-radius: 10px;
+              box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <img
+              src="https://www.svgrepo.com/show/99565/id-card.svg"
+              alt="John Doe"
+              style="height: 50px; width: 50px; border-radius: 50%"
+            />
+            <h3 style="margin: 15px 0 5px">John Doe</h3>
+            <p style="font-size: 14px">Adventure Specialist</p>
+            <button
+              style="
+                margin-top: 10px;
+                padding: 8px 16px;
+                border: none;
+                background-color: #007bff;
+                color: white;
+                border-radius: 5px;
+              "
+            >
+              CEO
+            </button>
+          </div>
+
+          <div
+            style="
+              width: 250px;
+              padding: 20px;
+              border: 1px solid #ccc;
+              border-radius: 10px;
+              box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <img
+              src="https://www.svgrepo.com/show/99565/id-card.svg"
+              alt="Jane Smith"
+              style="height: 50px; width: 50px; border-radius: 50%"
+            />
+            <h3 style="margin: 15px 0 5px">Jane Smith</h3>
+            <p style="font-size: 14px">Cultural Guide expert</p>
+            <button
+              style="
+                margin-top: 10px;
+                padding: 8px 16px;
+                border: none;
+                background-color: #007bff;
+                color: white;
+                border-radius: 5px;
+              "
+            >
+              Head of Operations
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="contactus" class="section active">
+        <h1>Contact Us</h1>
+        <fieldset>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <br />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <br />
+          <button type="submit">Submit</button>
+        </fieldset>
+      </div>
+    </div>
+
+    <script src="travel_recommendation.js"></script>
+  </body>
+</html>

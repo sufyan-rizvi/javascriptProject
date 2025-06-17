@@ -1,0 +1,207 @@
+/* Reset some default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  margin: 20px 0px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0077b6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 50px;
+  width: 100px;
+}
+
+button:hover {
+  background-color: #023e8a;
+}
+
+body {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  padding: 20px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1661954654458-c673671d4a08?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover; /* Scales image to fill */
+  background-repeat: no-repeat; /* Prevents tiling */
+}
+.search-div {
+  border-radius: 25px;
+  background-color: #f0f8ff;
+  padding: 15px;
+  height: 65px;
+  width: 500px;
+}
+.nav-div .search-div input[type="text"] {
+  height: 40px;
+  width: 350px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Navigation bar styling */
+.nav-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0096c7;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+/* Logo + Title */
+.nav-div > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-div h1 {
+  font-size: 24px;
+}
+
+/* Navigation links */
+.nav-div ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-div a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-div a:hover {
+  color: #ffd166;
+}
+
+/* Search box and buttons */
+.nav-div > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-div input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.nav-div button:hover {
+  background-color: #023e8a;
+}
+
+.data-div {
+  padding: 100px;
+  font-family: "Times New Roman", Times, serif;
+  margin: 50px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(100px);
+  box-shadow: 0 8px 35px 0;
+  border-radius: 15px;
+  height: auto;
+  width: 1770px;
+  color: #ccc;
+}
+
+.data-div h1 {
+  font-size: 80px;
+}
+
+#home h1 {
+  width: 90px;
+}
+
+#home p {
+  font-size: 25px;
+  width: 600px;
+}
+
+#aboutus h1 {
+  width: 600px;
+}
+
+#aboutus div {
+  margin: 10px;
+  padding: 10px;
+}
+
+#aboutus p {
+  width: 1200px;
+  font-size: 22px;
+}
+
+.section {
+  opacity: 0;
+  visibility: hidden;
+  /* transition: opacity 0.5s ease, visibility 0.5s ease; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.section.active {
+  opacity: 1;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  visibility: visible;
+  position: relative;
+}
+/* Contact Form Container */
+fieldset {
+  width: 100%;
+  color: #f0f8ff;
+  max-width: 600px;
+  margin: 0px;
+  padding: 20px 30px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Legend Title */
+legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  padding: 0 10px;
+}
+
+/* Label Styling */
+fieldset label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+  color: #ccc;
+  font-size: 18px;
+}
+
+/* Input and Textarea Styling */
+fieldset input[type="text"],
+fieldset input[type="email"],
+fieldset textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Button Styling */
